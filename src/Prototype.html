@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Hotels of the Las Vegas Strip</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 0;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #0071c2;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hotel-listing {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #e7e7e7;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .hotel-image {
+            width: 270px;
+            min-width: 270px;
+            position: relative;
+        }
+
+        .hotel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hotel-info {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hotel-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .hotel-name-area {
+            flex: 1;
+        }
+
+        .hotel-name {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #0071c2;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .hotel-name:hover {
+            text-decoration: underline;
+        }
+
+        .hotel-rating {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .rating-score {
+            background-color: #003580;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px;
+            border-radius: 5px 5px 5px 0;
+            font-size: 18px;
+        }
+
+        .rating-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .hotel-description {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+            }
+
+            .hotel-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .hotel-top {
+                flex-direction: column;
+            }
+
+            .hotel-rating {
+                align-items: flex-start;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>The Most Famous Hotels of the Las Vegas Strip</h1>
+    <p>Discover luxury, entertainment, and world-class amenities</p>
+</header>
+
+<section class="intro">
+    <p>Las Vegas is renowned for its luxurious and themed hotels that line the famous Strip.
+        These architectural marvels offer much more than just accommodation - they're complete entertainment
+        destinations featuring world-class dining, spectacular shows, extensive shopping, and of course,
+        casino gaming. Explore some of the most iconic hotels below.</p>
+</section>
+
+<div class="hotel-listing">
+    <!-- Bellagio Hotel -->
+    <div class="hotel-card">
+        <div class="hotel-image">
+            <img src="18-BEL-03963-0048---Bellagio-Hero-Shot---Resize-v00PP.webp" alt="Bellagio Hotel and Casino">
+        </div>
+        <div class="hotel-info">
+            <div>
+                <div class="hotel-top">
+                    <div class="hotel-name-area">
+                        <a href="https://bellagio.mgmresorts.com/en.html" class="hotel-name">Bellagio Hotel and Casino</a>
+                    </div>
+                    <div class="hotel-rating">
+                        <div class="rating-score">9.2</div>
+                        <div class="rating-text">Exceptional</div>
+                    </div>
+                </div>
+
+                <p class="hotel-description">The Bellagio is famous for its elegant fountains, fine art gallery, and luxury accommodations.
+                    The choreographed water feature known as the "Fountains of Bellagio" performs a magnificent display
+                    set to light and music.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caesars Palace -->
+    <div class="hotel-card">
+        <div class="hotel-image">
+            <img src="welcome-to-caesars-palace.jpg" alt="Caesars Palace">
+        </div>
+        <div class="hotel-info">
+            <div>
+                <div class="hotel-top">
+                    <div class="hotel-name-area">
+                        <a href="https://www.caesars.com/caesars-palace" class="hotel-name">Caesars Palace</a>
+                    </div>
+                    <div class="hotel-rating">
+                        <div class="rating-score">8.8</div>
+                        <div class="rating-text">Excellent</div>
+                    </div>
+                </div>
+
+                <p class="hotel-description">Caesars Palace is a legendary Las Vegas hotel with a Roman Empire theme. Known for its opulent
+                    design and star-studded entertainment history, it features the Forum Shops, a sprawling luxury mall,
+                    and the Colosseum.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Venetian Resort -->
+    <div class="hotel-card">
+        <div class="hotel-image">
+            <img src="283163011.jpg" alt="The Venetian Resort">
+        </div>
+        <div class="hotel-info">
+            <div>
+                <div class="hotel-top">
+                    <div class="hotel-name-area">
+                        <a href="https://www.venetianlasvegas.com/" class="hotel-name">The Venetian Resort</a>
+                    </div>
+                    <div class="hotel-rating">
+                        <div class="rating-score">9.0</div>
+                        <div class="rating-text">Superb</div>
+                    </div>
+                </div>
+
+                <p class="hotel-description">The Venetian Resort recreates the charm of Venice, complete with indoor canals where guests can
+                    enjoy gondola rides. It's one of the largest hotel complexes in the world, featuring an impressive
+                    replica of St. Mark's Square and the Grand Canal Shoppes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Las Vegas Strip Hotels Guide. All information is provided for informational purposes only.</p>
+</footer>
+</body>
+</html>

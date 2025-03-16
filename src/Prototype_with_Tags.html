@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famous Hotels of the Las Vegas Strip</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px 0;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #0071c2;
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 16px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hotel-listing {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hotel-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: row;
+      border: 1px solid #e7e7e7;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hotel-image {
+      width: 270px;
+      min-width: 270px;
+      position: relative;
+    }
+
+    .hotel-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hotel-info {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hotel-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .hotel-name-area {
+      flex: 1;
+    }
+
+    .hotel-name {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #0071c2;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .hotel-name:hover {
+      text-decoration: underline;
+    }
+
+    .hotel-rating {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .rating-score {
+      background-color: #003580;
+      color: white;
+      font-weight: bold;
+      padding: 8px 10px;
+      border-radius: 5px 5px 5px 0;
+      font-size: 18px;
+    }
+
+    .rating-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .hotel-description {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hotel-card {
+        flex-direction: column;
+      }
+
+      .hotel-image {
+        width: 100%;
+        height: 200px;
+      }
+
+      .hotel-top {
+        flex-direction: column;
+      }
+
+      .hotel-rating {
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>{{page_title}}</h1>
+  <p>{{page_subtitle}}</p>
+</header>
+
+<section class="intro">
+  <p>{{intro_text}}</p>
+</section>
+
+<div class="hotel-listing">
+  <!-- Bellagio Hotel -->
+  <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="{{hotel1_image}}" alt="{{hotel1_alt}}">
+    </div>
+    <div class="hotel-info">
+      <div>
+        <div class="hotel-top">
+          <div class="hotel-name-area">
+            <a href="{{hotel1_link}}" class="hotel-name">{{hotel1_name}}</a>
+          </div>
+          <div class="hotel-rating">
+            <div class="rating-score">{{hotel1_score}}</div>
+            <div class="rating-text">{{hotel1_rating}}</div>
+          </div>
+        </div>
+
+        <p class="hotel-description">{{hotel1_description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Caesars Palace -->
+  <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="{{hotel2_image}}" alt="{{hotel2_alt}}">
+    </div>
+    <div class="hotel-info">
+      <div>
+        <div class="hotel-top">
+          <div class="hotel-name-area">
+            <a href="{{hotel2_link}}" class="hotel-name">{{hotel2_name}}</a>
+          </div>
+          <div class="hotel-rating">
+            <div class="rating-score">{{hotel2_score}}</div>
+            <div class="rating-text">{{hotel2_rating}}</div>
+          </div>
+        </div>
+
+        <p class="hotel-description">{{hotel2_description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Venetian Resort -->
+  <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="{{hotel3_image}}" alt="{{hotel3_alt}}">
+    </div>
+    <div class="hotel-info">
+      <div>
+        <div class="hotel-top">
+          <div class="hotel-name-area">
+            <a href="{{hotel3_link}}" class="hotel-name">{{hotel3_name}}</a>
+          </div>
+          <div class="hotel-rating">
+            <div class="rating-score">{{hotel3_score}}</div>
+            <div class="rating-text">{{hotel3_rating}}</div>
+          </div>
+        </div>
+
+        <p class="hotel-description">{{hotel3_description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>{{footer_text}}</p>
+</footer>
+</body>
+</html>
