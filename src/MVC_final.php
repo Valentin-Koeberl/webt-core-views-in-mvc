@@ -1,8 +1,9 @@
 <?php
-function renderTemplate($templateFile, $data) {
+function renderTemplate($templateFile, $templateFileBusinessEntity, $data) {
     //auf die {{ im proto achten
     $template = file_get_contents($templateFile);
 
+    $business_entity_template = file_get_contents($templateFileBusinessEntity);
     //die hotels zum einfügen
     $hotelsHtml = "";
     foreach ($data as $hotel) {
@@ -27,4 +28,4 @@ $hotels = [
 ];
 
 //alles als html ausgeben
-echo renderTemplate("../public/Prototype_us3.html", $hotels);
+echo renderTemplate("../public/Prototype_us3.html", "../public/business_entity.html", $hotels);
