@@ -63,7 +63,7 @@ function renderTemplate($template, $placeholders) {
 }
 
 // Read the HTML template file
-$template = getTemplate('Prototype_with_Tags.html');
+$template = getTemplate('../public/Prototype_with_Tags.html');
 
 // Create an array of placeholders and their values
 $placeholders = [
