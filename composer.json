@@ -1,0 +1,17 @@
+{
+    "name": "laurensvidan/webt-core-views-in-mvc",
+    "description": "a useless composer for this story",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Laurensvidan\\WebtCoreViewsInMvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "IHateSEW",
+            "email": "168427476+IHateSEW@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
