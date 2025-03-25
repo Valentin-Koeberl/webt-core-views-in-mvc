@@ -1,9 +1,9 @@
 <?php
 function renderTemplate($templateFile, $data) {
-    // Read the HTML template
+    //auf die {{ im proto achten
     $template = file_get_contents($templateFile);
 
-    // Generate hotel blocks dynamically using a loop
+    //die hotels zum einfügen
     $hotelsHtml = "";
     foreach ($data as $hotel) {
         $hotelsHtml .= <<<HOTEL
@@ -14,18 +14,17 @@ function renderTemplate($templateFile, $data) {
         HOTEL;
     }
 
-    // Replace placeholder in template
     return str_replace("{{HOTELS}}", $hotelsHtml, $template);
 }
 
-// Dynamic hotel list (add as many hotels as needed)
+// Liste zum hinzufügen anderer Hotels
 $hotels = [
-    ["name" => "The Luxor", "description" => "A pyramid-shaped hotel with an Egyptian theme."],
-    ["name" => "Bellagio", "description" => "Famous for its fountains and luxury rooms."],
-    ["name" => "MGM Grand", "description" => "One of the largest hotels in the world."],
-    ["name" => "Caesars Palace", "description" => "A Roman-themed luxury hotel with a grand casino."],
-    ["name" => "The Venetian", "description" => "A Venice-inspired hotel with canals and gondolas."]
+    ["name" => "Hotel Sacher, Vienna", "description" => "A legendary luxury hotel famous for the original Sachertorte."],
+    ["name" => "Hotel Imperial, Vienna", "description" => "A 5-star palace hotel offering a royal experience since 1873."],
+    ["name" => "Schloss Fuschl, Salzburg", "description" => "A stunning lakeside castle hotel with breathtaking Alpine views."],
+    ["name" => "Aqua Dome, Tyrol", "description" => "A world-famous spa resort surrounded by the Ötztal Alps."],
+    ["name" => "Biohotel Daberer, Carinthia", "description" => "A sustainable, eco-friendly retreat focused on organic wellness."]
 ];
 
-// Render and display the final page
+//alles als html ausgeben
 echo renderTemplate("../public/Prototype_us3.html", $hotels);
