@@ -1,21 +1,17 @@
 <?php
-function renderTemplate($templateFile, $templateFileBusinessEntity, $data) {
-    //auf die {{ im proto achten
+function renderTemplate($templateFile, $templateFileBusinessEntity, $data): array|false|string
+{
     $template = file_get_contents($templateFile);
 
     $business_entity_template = file_get_contents($templateFileBusinessEntity);
-    //die hotels zum einfügen
     $hotelsHtml = "";
+
     foreach ($data as $hotel) {
-        $hotelsHtml .= <<<HOTEL
-        <div class="hotel">
-            <h2>{$hotel['name']}</h2>
-            <p>{$hotel['description']}</p>
-        </div>
-        HOTEL;
+        $tmp = str_replace("{{name}}", $hotel['name'], $business_entity_template);
+        $hotelsHtml .= str_replace("{{description}}", $hotel['description'], $tmp);
     }
 
-    return str_replace("{{HOTELS}}", $hotelsHtml, $template);
+    return str_replace("{{HOTEL}}", $hotelsHtml, $template);
 }
 
 // Liste zum hinzufügen anderer Hotels
@@ -28,4 +24,4 @@ $hotels = [
 ];
 
 //alles als html ausgeben
-echo renderTemplate("../public/Prototype_us3.html", "../public/business_entity.html", $hotels);
+echo renderTemplate("public/Prototype_us3.html", "public/business_entity.html", $hotels);
